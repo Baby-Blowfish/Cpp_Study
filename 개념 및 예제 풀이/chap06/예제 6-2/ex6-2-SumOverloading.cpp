@@ -1,3 +1,21 @@
+/*
+	생성자 함수 중복
+		// class Circle {
+		// private:
+		// 	int radius; 
+		// public:
+		// 	Circle(); 
+		// 	Circle(int r);
+		// 	~Circle();
+		// 	double getArea()  { return 3.14*radius*radius; }
+		// 	int getRadius() { return radius; }
+		// 	void setRadius(int radius) { this->radius = radius; }
+		// }; 
+
+	소멸자 함수 중복 : 소멸자는 매개변수를 가지지 않기 때문에 한 클래스에 오직 하나만 존재할수 있다.
+						따라서 근본적으로 함수 중복은 불가능 하다.
+*/
+
 #include <iostream>
 using namespace std;
 

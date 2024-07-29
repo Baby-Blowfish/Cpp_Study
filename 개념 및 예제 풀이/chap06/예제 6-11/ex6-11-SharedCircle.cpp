@@ -1,3 +1,8 @@
+/*
+	객체 사이에 공유 변수를 만들고자 할 때
+
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -24,10 +29,10 @@ int main() {
 	cout << "생존하고 있는 원의 개수 = " << Circle::getNumOfCircles() << endl;
 
 	delete [] p; // 10개의 소멸자 실행
-	cout << "생존하고 있는 원의 개수 = " << Circle::getNumOfCircles() << endl;
+	cout << "생존하고 있는 원의 개수 = " << p[0].getNumOfCircles() << endl;
 
 	Circle a; // 생성자 실행
-	cout << "생존하고 있는 원의 개수 = " << Circle::getNumOfCircles() << endl;
+	cout << "생존하고 있는 원의 개수 = " << a.getNumOfCircles() << endl;
 
 	Circle b; // 생성자 실행
 	cout << "생존하고 있는 원의 개수 = " << Circle::getNumOfCircles() << endl;
