@@ -7,6 +7,7 @@ using namespace std;
 
 int main() {
 	Shape *pStart=NULL;
+	
 	Shape *pLast;
 
 	pStart = new Circle(); // 처음에 원 도형을 생성한다.

@@ -1,3 +1,41 @@
+/*
+	범위 지정 연산자(::)를 이용하여 정적 바인딩으로 호출
+
+	
+	#include <iostream>
+	using namespace std;
+
+	int n = 11;
+	int main()
+	{
+		int n = 3;
+		cout << ::n <<endl;	// 11
+		cout << n << endl;	// 3
+	}
+
+	#include <iotstream>
+	using namespace std;
+
+	void sendMessage(const char* msg){	cout << msg << endl; }
+
+	class Window{
+	public:
+		void sendMessage(const char* msg) { cout << "window msg : "<<msg << endl;}
+		void run(){
+			::sendMessage("global hello");
+			sendMessage("loval hello");
+		}
+	};
+
+	int main()
+	{
+		Window window;
+		window.run();
+	}
+
+
+*/
+
 #include <iostream>
 using namespace std;
 

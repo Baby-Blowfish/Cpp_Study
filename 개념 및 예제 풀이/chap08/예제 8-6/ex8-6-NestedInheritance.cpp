@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -25,8 +26,8 @@ class GrandDerived : private Derived {
 	int c;
 protected:
 	void setAB(int x) {
-		setA(x); 		// ¨é
-		showA(); 		// ¨ê 
+		setA(x); 		// ¨é error!
+		showA(); 		// ¨ê error!
 		setB(x); 		// ¨ë
 	}
 };

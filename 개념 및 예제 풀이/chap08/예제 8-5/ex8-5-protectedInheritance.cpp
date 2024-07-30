@@ -19,10 +19,10 @@ public:
 
 int main() {
 	Derived x;
-	x.a = 5; 		// ¨ç
-	x.setA(10); 	// ¨è
-	x.showA();		// ¨é
-	x.b = 10; 		// ¨ê
-	x.setB(10); 	// ¨ë
-	x.showB(); 		// ¨ì
+	x.a = 5; 		// ¨ç error!
+	x.setA(10); 	// ¨è error!
+	x.showA();		// ¨é error!
+	x.b = 10; 		// ¨ê error!
+	x.setB(10); 	// ¨ë error!
+	x.showB(); 		// ¨ì o
 }
