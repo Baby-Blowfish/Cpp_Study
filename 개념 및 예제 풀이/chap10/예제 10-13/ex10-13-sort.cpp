@@ -1,3 +1,17 @@
+
+/*
+	STL 알고리즘은 전역 함수 로써 STL 컨테이너 클래스의 멤버 함수가 아니며 템플릿으로 작성되어있음
+	STL 알고리짐 함수는  tierator와 함께 작동
+
+		#include<algorithm>
+
+		vector<int> v;
+		...	
+		sort(v.begin,v.begin()+3);		// v.begin()에서 v.begin+2까지 처음 3개 원소 오름차순정렬
+		sort(v.begin+2,v.begin()+5);	// v.begin()+2에서 v.begin+4까지 처음 3개 원소 오름차순 정렬
+		sort(v.begin,v.end());			// 벡터 전체 오름차순 정렬
+*/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

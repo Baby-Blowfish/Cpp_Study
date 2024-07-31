@@ -1,3 +1,25 @@
+/*
+	map : '키'와 '값'의 쌍을 원소로 저장하고 '키'를 이용하여 값을 검색하는 제네릭 컨테이너
+		'키'와'값'은 기본 타입, 클래스 타입 모두 가능
+		동일한 키를 가지는 원소가 중복 저장되면 오류 발생
+
+		#includ <map>
+		using namespace std;
+
+		map<string,string> dic;
+		dic.insert(make_poir("love","사랑"));
+		dic["love"] = "사랑";
+		string kor = dic["love"];
+
+		[]연산자는 키 값을 찾을 수 없는 경우 ""(빈문자열)을 반환
+		at()함수는 키 값을 찾을 수 없는 경우 예외를 발생시킴.
+
+		string kor = dic.at("love");
+
+		if(dic.find(eng)==dic.end())	// eng의 '키'를 찾을 수 없다면 조건문은 true
+
+*/
+
 #include <iostream>
 #include <string>
 #include <map>

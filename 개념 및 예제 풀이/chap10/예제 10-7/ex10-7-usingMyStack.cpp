@@ -1,3 +1,6 @@
+/*
+	제네릭 스택의 제네릭 타입으로 포인터나 클래스로 구체화하는 예
+*/
 #include <iostream>
 #include <string>
 using namespace std;

@@ -1,3 +1,8 @@
+/*
+	유니코드는 정렬된 한글의 완성형으로 구성됨
+	따라서 글자를 비교할 때 ㄱ,ㄴ,ㄷ..을 비교하는 것이 아닌 완셩된 문자인 황, 김, 이를 비교한다. 
+*/	
+
 #include <iostream>
 #include <string>
 #include <vector>

@@ -1,3 +1,11 @@
+/*
+	두 개 이상의 제네릭 타입을 가진 제네릭 클래스
+
+	generic class(제네릭 클래스) : 클래스 선언부와 구현부를 모두 template으로 선언
+								  제네릭 클래스의 멤버 함수는 자동 제네릭 함수
+								  클래스 선언부 .h  와 클래스 구현부 .cpp를 다른파일로 못만듬. 
+	
+*/
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,30 @@
+/*
+	auto : c++11표준부터 의미가 수정되어, 변수 선언문으로부터 변수의 타입을 추론하여 결정하도록 지시
+		복잡한 형식의 변수 선언을 간소하게 해주며, 타입의 선언의 오타나 번거로움을 줄일 수 있게함.
+
+		auto i = 3.14; 	// double i
+		auto n = 3; 	// int	n
+		auto *p = &n	// int* p
+
+		int n = 10;
+		int & ref = n;
+		auto ref2 = ref;	// int& ref2
+
+		int squre(int x){return x*x;}
+		auto n = squar(3);	// int n;
+
+		vector<int> v = {1,2,3,4,5};
+		vector<int>::iterator it;
+		for(it=v.begin(); it!=v.end(); it++)
+		{	... }
+
+		vector<int> v = {1,2,3,4,5};
+		for(auto it=v.begin(); it!=v.end(); it++)		// it는 vector<int>::iterator로 추론됨
+		{	... }
+		
+*/
+
+
 #include <iostream>
 #include <vector>
 using namespace std;

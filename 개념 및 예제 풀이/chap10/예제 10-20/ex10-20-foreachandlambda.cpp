@@ -1,3 +1,9 @@
+/*
+	1. 한번만 호출하고 재상요하지 않기 때문에 함수에 이름을 붙일 필요가 없는 경우
+	2. STL 알고리즘 함수의 매개 변수에 연산 코드를 넘기는 경우, 연산 코드를 익명의 람다식으로 작성
+*/
+
+
 #include <iostream>
 #include <vector>
 #include <algorithm> // for_each() 알고리즘 함수를 사용하기 위함

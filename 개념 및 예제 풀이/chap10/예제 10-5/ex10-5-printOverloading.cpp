@@ -1,3 +1,18 @@
+/*
+	템플릿 함수와 이름이 동일한 함수과 중복되어 있을 경우 컴파일러는 중복된 함수를 템플릿 함수보다
+	우선하여 바인딩 한다.
+
+	템플릿 함수에 디폴트 매개 변수 사용 가능
+		template <class T> 
+		void print(T array [], int n = 3) {
+			for(int i=0; i<n; i++) 
+				cout << array[i] << '\t';
+			cout << endl;
+		}
+
+		int x[] = {1,2,3,4,5};
+		print(x);
+*/
 #include <iostream>
 using namespace std;
 
