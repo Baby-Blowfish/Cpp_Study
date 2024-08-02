@@ -1,11 +1,12 @@
+
 #include <iostream>
 #include <fstream>
 using namespace std;
 
 int main() {
 	// 소스 파일과 목적 파일의 이름
-	const char* srcFile = "c:\\temp\\desert.jpg";
-	const char* destFile = "c:\\temp\\copydesert.jpg";
+	const char* srcFile = "C:\\Users\\cannu\\Desktop\\김효진.jpg";
+	const char* destFile = "C:\\Users\\cannu\\Desktop\\김효진.jpg";
 
 	// 소스 파일 열기
 	ifstream fsrc(srcFile, ios::in | ios::binary);

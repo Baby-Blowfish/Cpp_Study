@@ -1,3 +1,9 @@
+/*
+	조작자의 실행 과정
+		cout << endl;
+		cout ,<< (endl);
+*/
+
 #include <iostream>
 
 using namespace std;

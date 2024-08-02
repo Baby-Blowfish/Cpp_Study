@@ -1,3 +1,7 @@
+/*
+	<< insertion operator (삽입연산자) : 연산자 중복
+*/
+
 #include <iostream>
 using namespace std;
 

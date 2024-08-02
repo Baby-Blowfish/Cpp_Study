@@ -1,3 +1,14 @@
+/*
+	text file	: 오로지 문자만 기록
+					txt, HTML ,XML, C++,C,Java 소스 파일
+	binary file	: 문자, 이미지 등 다양한 정보가 기록
+					jpeg,bmp,mp3,hwp,doc,ppt,obj,exe
+
+	#include <fstream>
+	using namespace std;
+	
+*/
+
 #include <iostream>
 #include <fstream>
 using namespace std;

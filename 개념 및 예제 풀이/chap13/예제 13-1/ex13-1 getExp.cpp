@@ -1,4 +1,4 @@
-#include <iostream>
+de <iostream>
 using namespace std;
 
 int getExp(int base, int exp) { // base의 exp 지수승을 계산하여 리턴

@@ -1,3 +1,12 @@
+/*
+	istream class
+
+	int get() : 입력 스트림에서 문자를 읽어 리턴, 오류나 EOF를 만나면 -1(EOF) 리턴
+	istream& get(char& ch) : 입력 스트림에서 문자를 읽어 ch에 저장, 현재 입력 스트림 객체의 참조 리턴
+	오류나 EOF를 만나면, 스트림 내부의 오류 플래그(failbit) 세팅
+
+*/
+
 #include <iostream>
 using namespace std;
 

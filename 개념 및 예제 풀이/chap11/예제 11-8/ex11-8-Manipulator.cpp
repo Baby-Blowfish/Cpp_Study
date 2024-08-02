@@ -1,3 +1,8 @@
+/*
+	매개  변수를 하나 가진 조작자
+		#include <iomanip>
+*/
+
 #include <iostream>
 #include <iomanip>
 using namespace std;

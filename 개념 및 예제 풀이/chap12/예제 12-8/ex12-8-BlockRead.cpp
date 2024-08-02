@@ -1,3 +1,9 @@
+/*
+	istream& read(char* s, int n)
+	ostream& write(char* s, int n)
+	int gcout()
+*/
+
 #include <iostream>
 #include <fstream>
 using namespace std;

@@ -1,3 +1,14 @@
+/*
+	포멧 입출력 
+	
+	format flag(포멧 플래그) : 32개의 멥버 변수, 이를 참조하여 포멧 입출력
+
+	long setf(long flags)
+
+	long unsetf(long flags)
+
+*/
+
 #include <iostream>
 using namespace std;
 

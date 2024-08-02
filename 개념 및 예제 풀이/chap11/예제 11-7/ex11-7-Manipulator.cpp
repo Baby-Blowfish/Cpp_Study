@@ -1,3 +1,9 @@
+/*
+	manipulator(조작자) : <<,>> 연산자와 항상 함께 사용
+
+	매개 변수 없는 조작자
+*/
+
 #include <iostream>
 using namespace std;
 

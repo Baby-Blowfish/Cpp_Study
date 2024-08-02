@@ -1,3 +1,9 @@
+/*
+	istream& get(char* s, int n) : 입력 스트림으로부터 n-1개의 문자를 읽어 배열 s에 저장하고 마지막에
+									'\0' 문자 삽입, 입력 도중 '\n'을 만나면 '\0'을 삽입하고 리턴
+	
+*/
+
 #include <iostream>
 #include <cstring>
 using namespace std;
