@@ -1,9 +1,9 @@
-/* 
+/*
 	소스: SimpleC++.cpp
 	cout과 << 연산자를 이용하여 화면에 출력한다.
 */
 
-#include <iostream> //  #include : 전처리기(preprocessor : cpp), 헤더파일을 컴파일 전에 소스에서 확장하도록 지시, 매크로의 경우 미리 변환됨 
+#include <iostream> //  #include : 전처리기(preprocessor : cpp), 헤더파일을 컴파일 전에 소스에서 확장하도록 지시, 매크로의 경우 미리 변환됨
 // <iosstream> : .h는 요즘 안붙이는 추세
 
 // useing namespace std; : 네임스페이스
@@ -17,7 +17,7 @@
 		std::cout << n+5 << f() << true << c << std::endl;
 // std::cout<<'\n'		 	: 단순이 스트림 버퍼에 '\n'을 삽입하고 끝남.
 // std::cout<<std::endl 	: 조작자(manipulator) 함수, <iostream>에 정의, 스트림 버퍼에 '\n'을 삽입하고 \
-							  cout에게 현재 스트림 버퍼에 있는 데이터를 즉각 장치에 출력하도록 지시 
+							  cout에게 현재 스트림 버퍼에 있는 데이터를 즉각 장치에 출력하도록 지시
 
 int main() {
 	std::cout << "Hello\n"; // 화면에 Hello를 출력하고 다음 줄로 넘어감

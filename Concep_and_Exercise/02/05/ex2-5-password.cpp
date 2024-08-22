@@ -14,7 +14,7 @@ int main() {
 			cout << "프로그램을 정상 종료합니다." << endl;
 			break;
 		}
-		else 
+		else
 			cout << "암호가 틀립니다~~" << endl;
 	}
 }

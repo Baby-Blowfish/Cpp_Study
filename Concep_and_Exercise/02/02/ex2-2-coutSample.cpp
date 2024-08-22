@@ -10,11 +10,11 @@ int main() {
 	int n=3;
 	char c='#';
 	std::cout << c << 5.5 << '-' << n << "hello" << true << std::endl;
-	std::cout << "n + 5 = " << n + 5 << '\n'; 
-	std::cout << "면적은 " << area(n); // 함수 area()의 리턴 값 출력
+	std::cout << "n + 5 = " << n + 5 << '\n';
+	std::cout << "Area is :  " << area(n); // 함수 area()의 리턴 값 출력
 }
 // #5.5-3hello1
 // n + 5 = 8
-// 면적은 28.26
+// Area is :  28.26
 
 
