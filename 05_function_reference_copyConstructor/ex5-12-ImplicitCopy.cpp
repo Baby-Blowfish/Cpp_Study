@@ -1,43 +1,43 @@
 
-#define _CRT_SECURE_NO_WARNINGS //ºñÁÖ¾ó ½ºÆ©µğ¿À¿¡¼­ strcpy·Î ÀÎÇÑ ¿À·ù¸¦ ¸·±â À§ÇÑ ¼±¾ğ¹®
+#define _CRT_SECURE_NO_WARNINGS //ë¹„ì£¼ì–¼ ìŠ¤íŠœë””ì˜¤ì—ì„œ strcpyë¡œ ì¸í•œ ì˜¤ë¥˜ë¥¼ ë§‰ê¸° ìœ„í•œ ì„ ì–¸ë¬¸
 #include <iostream>
 #include <cstring>
 using namespace std;
 
-class Person { // Person Å¬·¡½º ¼±¾ğ
+class Person { // Person í´ë˜ìŠ¤ ì„ ì–¸
 	char* name;
 	int id;
 public:
-	Person(int id,const char* name); // »ı¼ºÀÚ
-	Person(Person& person); // º¹»ç »ı¼ºÀÚ
-	~Person(); // ¼Ò¸êÀÚ
+	Person(int id,const char* name); // ìƒì„±ì
+	Person(Person& person); // ë³µì‚¬ ìƒì„±ì
+	~Person(); // ì†Œë©¸ì
 	void changeName(const char *name);
 	void show() { cout << id << ',' << name << endl; }
 };
 
-Person::Person(int id, const char* name) { // »ı¼ºÀÚ
+Person::Person(int id, const char* name) { // ìƒì„±ì
 	this->id = id;
-	int len = strlen(name); // nameÀÇ ¹®ÀÚ °³¼ö
-	this->name = new char [len+1]; // name ¹®ÀÚ¿­ °ø°£ À´ç
-	strcpy(this->name, name); // name¿¡ ¹®ÀÚ¿­ º¹»ç
+	int len = strlen(name); // nameì˜ ë¬¸ì ê°œìˆ˜
+	this->name = new char [len+1]; // name ë¬¸ìì—´ ê³µê°„ Âë‹¹
+	strcpy(this->name, name); // nameì— ë¬¸ìì—´ ë³µì‚¬
 }
 
-Person::Person(Person& person) { // º¹»ç »ı¼ºÀÚ
-	this->id = person.id; // id °ª º¹»ç
-	int len = strlen(person.name);// nameÀÇ ¹®ÀÚ °³¼ö
-	this->name = new char [len+1]; // nameÀ» À§ÇÑ °ø°£ À´ç
-	strcpy(this->name, person.name); // nameÀÇ ¹®ÀÚ¿­ º¹»ç
-	cout << "º¹»ç »ı¼ºÀÚ ½ÇÇà " << this->name << endl;
+Person::Person(Person& person) { // ë³µì‚¬ ìƒì„±ì
+	this->id = person.id; // id ê°’ ë³µì‚¬
+	int len = strlen(person.name);// nameì˜ ë¬¸ì ê°œìˆ˜
+	this->name = new char [len+1]; // nameì„ ìœ„í•œ ê³µê°„ Âë‹¹
+	strcpy(this->name, person.name); // nameì˜ ë¬¸ìì—´ ë³µì‚¬
+	cout << "ë³µì‚¬ ìƒì„±ì ì‹¤í–‰ " << this->name << endl;
 }
 
-Person::~Person() {// ¼Ò¸êÀÚ
-	if(name) // ¸¸ÀÏ name¿¡ µ¿Àû ÇÒ´çµÈ ¹è¿­ÀÌ ÀÖÀ¸¸é
-		delete [] name; // µ¿Àû ÇÒ´ç ¸Ş¸ğ¸® ¼Ò¸ê
+Person::~Person() {// ì†Œë©¸ì
+	if(name) // ë§Œì¼ nameì— ë™ì  í• ë‹¹ëœ ë°°ì—´ì´ ìˆìœ¼ë©´
+		delete [] name; // ë™ì  í• ë‹¹ ë©”ëª¨ë¦¬ ì†Œë©¸
 }
 
-void Person::changeName(const char* name) { // ÀÌ¸§ º¯°æ
+void Person::changeName(const char* name) { // ì´ë¦„ ë³€ê²½
 	if(strlen(name) > strlen(this->name))
-		return; // ÇöÀç name¿¡ ÇÒ´çµÈ ¸Ş¸ğ¸®º¸´Ù ±ä ÀÌ¸§À¸·Î ¹Ù²Ü ¼ö ¾ø´Ù.
+		return; // í˜„ì¬ nameì— í• ë‹¹ëœ ë©”ëª¨ë¦¬ë³´ë‹¤ ê¸´ ì´ë¦„ìœ¼ë¡œ ë°”ê¿€ ìˆ˜ ì—†ë‹¤.
 	strcpy(this->name, name);
 }
 
@@ -52,7 +52,7 @@ Person g() {
 
 int main() {
 	Person father(1, "Kitae");
-	Person son = father;		// º¹»ç »ı¼ºÀÚ È£Ãâ
-	f(father);					// º¹»ç »ı¼ºÀÚ È£Ãâ
-	g();						// º¹»ç »ı¼ºÀÚ È£Ãâ
+	Person son = father;		// ë³µì‚¬ ìƒì„±ì í˜¸ì¶œ
+	f(father);					// ë³µì‚¬ ìƒì„±ì í˜¸ì¶œ
+	g();						// ë³µì‚¬ ìƒì„±ì í˜¸ì¶œ
 }

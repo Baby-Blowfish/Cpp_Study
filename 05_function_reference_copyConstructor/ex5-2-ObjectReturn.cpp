@@ -1,23 +1,23 @@
 /*
-	object assignment(°´Ã¼ Ä¡È¯) // ³»¿ë¹°¸¸ °°À»»Ó º°°³ÀÌ´Ù.
+	object assignment(ê°ì²´ ì¹˜í™˜) // ë‚´ìš©ë¬¼ë§Œ ê°™ì„ë¿ ë³„ê°œì´ë‹¤.
 		Circle c1(5);
 		Circle c2(30);
-		c1 = c2;		// °´Ã¼¸¦ ºñÆ® ´ÜÀ§·Î º¹»ç
+		c1 = c2;		// ê°ì²´ë¥¼ ë¹„íŠ¸ ë‹¨ìœ„ë¡œ ë³µì‚¬
 
-	object return(°´Ã¼ ¸®ÅÏ)	
+	object return(ê°ì²´ ë¦¬í„´)	
 		Circle getCircle(){
 			Circle tmp(30);
-			return tmp;		//	1. return¹®ÀÌ ½ÇÇàµÇ¸é tmpÀÇ º¹»çº»ÀÌ »ý¼º
+			return tmp;		//	1. returnë¬¸ì´ ì‹¤í–‰ë˜ë©´ tmpì˜ ë³µì‚¬ë³¸ì´ ìƒì„±
 		}
 
 		Circle r;
-		r = getCircle();	// 2. tmpÀÇ º¹»çº»ÀÌ c¿¡ Ä¡È¯ µÊ. ±×ÈÄ tmp´Â stack¿¡¼­ »ç¶óÁü.
+		r = getCircle();	// 2. tmpì˜ ë³µì‚¬ë³¸ì´ cì— ì¹˜í™˜ ë¨. ê·¸í›„ tmpëŠ” stackì—ì„œ ì‚¬ë¼ì§.
 
-		°´Ã¼ÀÇ »ý¼º ¹× ¼Ò¸ê : °´Ã¼ÀÇ ¸Þ¸ð¸® ÇÒ´ç »ý¼ºÀÚ È£Ãâ °´Ã¼À¸ »ç¿ë ¼Ò¸êÀÚ È£Ãâ °´Ã¼ÀÇ ¸Þ¸ð¸® ÇØÁ¦
-		»ý¼º : »ý¼ºÀÚ
-		´ëÀÔ : º¹»ç ´ëÀÔ »ý¼ºÀÚ
-		º¹»ç : º¹»ç »ý¼ºÀÚ
-		¼Ò¸ê : ¼Ò¸êÀÚ
+		ê°ì²´ì˜ ìƒì„± ë° ì†Œë©¸ : ê°ì²´ì˜ ë©”ëª¨ë¦¬ í• ë‹¹ ìƒì„±ìž í˜¸ì¶œ ê°ì²´ìœ¼ ì‚¬ìš© ì†Œë©¸ìž í˜¸ì¶œ ê°ì²´ì˜ ë©”ëª¨ë¦¬ í•´ì œ
+		ìƒì„± : ìƒì„±ìž
+		ëŒ€ìž… : ë³µì‚¬ ëŒ€ìž… ìƒì„±ìž
+		ë³µì‚¬ : ë³µì‚¬ ìƒì„±ìž
+		ì†Œë©¸ : ì†Œë©¸ìž
 
 */
 
@@ -35,14 +35,14 @@ public:
 
 Circle getCircle() {
 	Circle tmp(30);
-	return tmp; // °´Ã¼ tmpÀ» ¸®ÅÏÇÑ´Ù.
+	return tmp; // ê°ì²´ tmpì„ ë¦¬í„´í•œë‹¤.
 }
 
 int main() {
-	Circle c; // °´Ã¼°¡ »ý¼ºµÈ´Ù. radius=1·Î ÃÊ±âÈ­µÈ´Ù.
+	Circle c; // ê°ì²´ê°€ ìƒì„±ëœë‹¤. radius=1ë¡œ ì´ˆê¸°í™”ëœë‹¤.
 	cout << c.getArea() << endl;
 
-	c = getCircle(); // º¹»ç ´ëÀÔ »ý¼ºÀÚ
+	c = getCircle(); // ë³µì‚¬ ëŒ€ìž… ìƒì„±ìž
 	cout << c.getArea() << endl;
 }
 

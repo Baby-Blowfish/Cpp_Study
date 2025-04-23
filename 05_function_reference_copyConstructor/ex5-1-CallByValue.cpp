@@ -1,5 +1,5 @@
 /*
-	ÇÔ¼öÀÇ ÀÎÀÚ Àü´Þ ¹æ½Ä ¸®ºä
+	í•¨ìˆ˜ì˜ ì¸ìž ì „ë‹¬ ë°©ì‹ ë¦¬ë·°
 	argument passing 
 		call by value
 		call by address
@@ -35,73 +35,24 @@
 
 
 
-	ÇÔ¼ö È£Ãâ½Ã °´Ã¼ Àü´Þ
+	í•¨ìˆ˜ í˜¸ì¶œì‹œ ê°ì²´ ì „ë‹¬
 
-	1. call by value °´Ã¼ Àü´Þ
-		°ª¿¡ ÀÇ ÇÑ È£ÃâÀº ÇÔ¼ö ¾È¿¡¼­ ¸Å°³ º¯¼ö °´Ã¼¿¡ ¾î¶² º¯È­°¡ ÀÏ¾î³ªµµ ½ÇÀÎÀÚ¸¦ ÈÑ¼Õ½ÃÅ°Áö ¾Ê´Â ÀåÁ¡
-		½ÇÀÎÀÚ °´Ã¼ÀÇ Å©±â°¡ Å©¸é °´Ã¼¸¦ º¹»çÇÏ´Â ½Ã°£ÀÌ Ä¿Áö´Â ´ÜÁ¡
+	1. call by value ê°ì²´ ì „ë‹¬
+		ê°’ì— ì˜ í•œ í˜¸ì¶œì€ í•¨ìˆ˜ ì•ˆì—ì„œ ë§¤ê°œ ë³€ìˆ˜ ê°ì²´ì— ì–´ë–¤ ë³€í™”ê°€ ì¼ì–´ë‚˜ë„ ì‹¤ì¸ìžë¥¼ í›¼ì†ì‹œí‚¤ì§€ ì•ŠëŠ” ìž¥ì 
+		ì‹¤ì¸ìž ê°ì²´ì˜ í¬ê¸°ê°€ í¬ë©´ ê°ì²´ë¥¼ ë³µì‚¬í•˜ëŠ” ì‹œê°„ì´ ì»¤ì§€ëŠ” ë‹¨ì 
 
-		°´Ã¼¸¦ ¸Å°³ º¯¼ö·Î °¡Áö´Â ÇÔ¼öÀÇ °æ¿ì ¸Å°³ º¯¼öÀÇ °´Ã¼ÀÇ »ý¼ºÀÚ¸¦ ½ÇÇàµÇÁö ¾Ê°í ¼Ò¸êÀÚ¸¸ ½ÇÇàµÊ
-		¸¸ÀÏ »ý¼ºÀÚ°¡ ½ÇÇàµÈ´Ù¸é Àü´Þ¹ÞÀº ¿øº»ÀÇ »óÅÂ¸¦ ÀÒ¾î¹ö¸®°Ô µÈ´Ù. µû¶ó¼­ ¸Å°³º¯¼öÀÇ »ý¼ºÀÚ¸¦ ½ÇÇàÇÏÁö ¾Êµµ·ÏÇÔ.
-		¼Ò¸êÀÚ´Â ½ÇÇàµÊ. Áï ¼Ò¸êÀÚ°¡ ½ÇÇàµÇ´Â ºñ´ëÄª ±¸Á¶
+		ê°ì²´ë¥¼ ë§¤ê°œ ë³€ìˆ˜ë¡œ ê°€ì§€ëŠ” í•¨ìˆ˜ì˜ ê²½ìš° ë§¤ê°œ ë³€ìˆ˜ì˜ ê°ì²´ì˜ ìƒì„±ìžë¥¼ ì‹¤í–‰ë˜ì§€ ì•Šê³  ì†Œë©¸ìžë§Œ ì‹¤í–‰ë¨
+		ë§Œì¼ ìƒì„±ìžê°€ ì‹¤í–‰ëœë‹¤ë©´ ì „ë‹¬ë°›ì€ ì›ë³¸ì˜ ìƒíƒœë¥¼ ìžƒì–´ë²„ë¦¬ê²Œ ëœë‹¤. ë”°ë¼ì„œ ë§¤ê°œë³€ìˆ˜ì˜ ìƒì„±ìžë¥¼ ì‹¤í–‰í•˜ì§€ ì•Šë„ë¡í•¨.
+		ì†Œë©¸ìžëŠ” ì‹¤í–‰ë¨. ì¦‰ ì†Œë©¸ìžê°€ ì‹¤í–‰ë˜ëŠ” ë¹„ëŒ€ì¹­ êµ¬ì¡°
 
-		ÀÌ¸¦ ÇØ°áÇÏ±â À§ÇØ copy constructor(º¹»ç »ý¼ºÀÚ)¸¦
+		ì´ë¥¼ í•´ê²°í•˜ê¸° ìœ„í•´ copy constructor(ë³µì‚¬ ìƒì„±ìž)ë¥¼
 */
 
 /*
-	call by address °´Ã¼ Àü´Þ
-		°´Ã¼¸¦ º¹»çÇÏ´Â ½Ã°£ ¼Ò¸ð°¡ ¾øÀ½. ¸Å°³ º¯¼ö°¡ ´Ü¼ø Æ÷ÀÎÅÍ ÀÌ¹Ç·Î »ý¼ºÀÚ ¼Ò¸êÀÚ ºñ´ëÄª ¹®Á¦µµ ¾øÀ½
-		¿øº»°´Ã¼¸¦ ÈÑ¼ÕÇÒ °¡´É¼ºÀÌ ÀÖ´Â ´ÜÁ¡ÀÌ ÀÖÀ½.
+	call by address ê°ì²´ ì „ë‹¬
+		ê°ì²´ë¥¼ ë³µì‚¬í•˜ëŠ” ì‹œê°„ ì†Œëª¨ê°€ ì—†ìŒ. ë§¤ê°œ ë³€ìˆ˜ê°€ ë‹¨ìˆœ í¬ì¸í„° ì´ë¯€ë¡œ ìƒì„±ìž ì†Œë©¸ìž ë¹„ëŒ€ì¹­ ë¬¸ì œë„ ì—†ìŒ
+		ì›ë³¸ê°ì²´ë¥¼ í›¼ì†í•  ê°€ëŠ¥ì„±ì´ ìžˆëŠ” ë‹¨ì ì´ ìžˆìŒ.
 	
-	#include <iostream>
-
-	using namespace std;
-
-	class Circle{
-		private:
-			int radius;
-		public:
-			Circle();
-			Circle(int r);
-			~Circle();
-			double getArea(){return 3.14*radius*radius;}
-			int getRadius(){return radius;}
-			void setRadius(int radius){ this->radius = radius;}
-	};
-
-	Circle::Circle(){
-		radius = 1;
-	}
-	Circle::Circle(int radius)
-	{
-		this->radius = radius;
-		cout << "»ý¼ºÀÚ ½ÇÇà radius = "<<radius<<endl;
-	}
-
-	Circle::~Circle()
-	{
-		cout<<"¼Ò¸êÀÚ ½ÇÇà radius = "<<radius<<endl;
-	}
-
-	void increase(Circle *c)
-	{
-		int r = c->getRadius();
-		c->setRadius(r+1);
-	}
-
-	int main()
-	{
-		Circle waffle(30);
-		
-		increase(&waffle);
-
-		cout<<waffle.getRadius()<<endl;
-		return 0;
-	}
-
-	// »ý¼ºÀÚ ½ÇÇà radius = 30
-	// 31
-	// ¼Ò¸êÀÚ ½ÇÇà radius = 31
 */
 
 #include <iostream>
@@ -121,16 +72,16 @@ public:
 
 Circle::Circle() {
 	radius = 1;
-	cout << "»ý¼ºÀÚ ½ÇÇà radius = " << radius << endl;
+	cout << "ìƒì„±ìž ì‹¤í–‰ radius = " << radius << endl;
 }
 
 Circle::Circle(int radius) {
 	this->radius = radius;
-	cout << "»ý¼ºÀÚ ½ÇÇà radius = "  << radius << endl;
+	cout << "ìƒì„±ìž ì‹¤í–‰ radius = "  << radius << endl;
 }
 
 Circle::~Circle() {
-	cout << "¼Ò¸êÀÚ ½ÇÇà radius = " << radius << endl;
+	cout << "ì†Œë©¸ìž ì‹¤í–‰ radius = " << radius << endl;
 }
 
 void increase(Circle c) {
@@ -140,13 +91,13 @@ void increase(Circle c) {
 
 int main() {
 	Circle waffle(30);
-	increase(waffle);			//		call by value °´Ã¼ Àü´Þ
+	increase(waffle);			//		call by value ê°ì²´ ì „ë‹¬
 	cout << waffle.getRadius() << endl;
 }
 
 /*
-»ý¼ºÀÚ ½ÇÇà radius = 30
-¼Ò¸êÀÚ ½ÇÇà radius = 31
+ìƒì„±ìž ì‹¤í–‰ radius = 30
+ì†Œë©¸ìž ì‹¤í–‰ radius = 31
 30
-¼Ò¸êÀÚ ½ÇÇà radius = 30
+ì†Œë©¸ìž ì‹¤í–‰ radius = 30
 */

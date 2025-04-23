@@ -12,18 +12,18 @@ public:
 
 void readRadius(Circle &c) {
 	int r;
-	cout << "Á¤¼ö °ªÀ¸·Î ¹İÁö¸§À» ÀÔ·ÂÇÏ¼¼¿ä>>";
-	cin >> r; // ¹İÁö¸§ °ª ÀÔ·Â
-	c.setRadius(r); // ¹İÁö¸§ ¼³Á¤
+	cout << "ì •ìˆ˜ ê°’ìœ¼ë¡œ ë°˜ì§€ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”>>";
+	cin >> r; // ë°˜ì§€ë¦„ ê°’ ì…ë ¥
+	c.setRadius(r); // ë°˜ì§€ë¦„ ì„¤ì •
 }
 
 int main() {
 	Circle donut;
 	readRadius(donut);
-	cout << "donutÀÇ ¸éÀû = " << donut.getArea() << endl;
+	cout << "donutì˜ ë©´ì  = " << donut.getArea() << endl;
 }
 
 /*
-Á¤¼ö °ªÀ¸·Î ¹İÁö¸§À» ÀÔ·ÂÇÏ¼¼¿ä>>13
-donutÀÇ ¸éÀû = 530.66
+ì •ìˆ˜ ê°’ìœ¼ë¡œ ë°˜ì§€ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”>>13
+donutì˜ ë©´ì  = 530.66
 */

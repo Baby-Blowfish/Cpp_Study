@@ -1,54 +1,54 @@
 /*
-	shallow copy : º¹»ç»ı¼ºÀÚ¸¦ ÀÛ¼º¾ÈÇÒ¶§ ±âº»º¹»ç»ı¼ºÀÚ°¡ ¸¸µé¾îÁöÁü, ±âº»º¹»ç»ı¼ºÀÚ´Â °ªÀ» ±×´ë·Î º¹»çÇÔ.
-					ÀÌ¶§ ¸¸¾à ¸â¹ö º¯¼ö¿¡ Æ÷ÀÎÅÍ°¡ ÀÖ´Ù¸é ¿øº»ÀÇ Æ÷ÀÎÅÍ¿Í º¹»çº»ÀÇ Æ÷ÀÎÅÍ°¡ °°Àº °ø°£À» 
-					°¡¸®Å°¹Ç·Î ÇÏ³ª¸¦ º¯°æÇÏ¸é µÑ´Ù º¯°æµÇ´Â ¹®Á¦°¡ ÀÖÀ½. 
+	shallow copy : ë³µì‚¬ìƒì„±ìë¥¼ ì‘ì„±ì•ˆí• ë•Œ ê¸°ë³¸ë³µì‚¬ìƒì„±ìê°€ ë§Œë“¤ì–´ì§€ì§, ê¸°ë³¸ë³µì‚¬ìƒì„±ìëŠ” ê°’ì„ ê·¸ëŒ€ë¡œ ë³µì‚¬í•¨.
+					ì´ë•Œ ë§Œì•½ ë©¤ë²„ ë³€ìˆ˜ì— í¬ì¸í„°ê°€ ìˆë‹¤ë©´ ì›ë³¸ì˜ í¬ì¸í„°ì™€ ë³µì‚¬ë³¸ì˜ í¬ì¸í„°ê°€ ê°™ì€ ê³µê°„ì„ 
+					ê°€ë¦¬í‚¤ë¯€ë¡œ í•˜ë‚˜ë¥¼ ë³€ê²½í•˜ë©´ ë‘˜ë‹¤ ë³€ê²½ë˜ëŠ” ë¬¸ì œê°€ ìˆìŒ. 
 */
 
-#define _CRT_SECURE_NO_WARNINGS //ºñÁÖ¾ó ½ºÆ©µğ¿À¿¡¼­ strcpy·Î ÀÎÇÑ ¿À·ù¸¦ ¸·±â À§ÇÑ ¼±¾ğ¹®
+#define _CRT_SECURE_NO_WARNINGS //ë¹„ì£¼ì–¼ ìŠ¤íŠœë””ì˜¤ì—ì„œ strcpyë¡œ ì¸í•œ ì˜¤ë¥˜ë¥¼ ë§‰ê¸° ìœ„í•œ ì„ ì–¸ë¬¸
 #include <iostream>
 #include <cstring>
 using namespace std;
 
-class Person { // Person Å¬·¡½º ¼±¾ğ
+class Person { // Person í´ë˜ìŠ¤ ì„ ì–¸
 	char* name;
 	int id;
 public:
-	Person(int id, const char* name); // »ı¼ºÀÚ
-	~Person(); // ¼Ò¸êÀÚ
+	Person(int id, const char* name); // ìƒì„±ì
+	~Person(); // ì†Œë©¸ì
 	void changeName(const char *name);
 	void show() { cout << id << ',' << name << endl; }
 };
 
-Person::Person(int id,const char* name) { // »ı¼ºÀÚ
+Person::Person(int id,const char* name) { // ìƒì„±ì
 	this->id = id;
-	int len = strlen(name); // nameÀÇ ¹®ÀÚ °³¼ö
-	this->name = new char [len+1]; // name ¹®ÀÚ¿­ °ø°£ À´ç
-	strcpy(this->name, name); // name¿¡ ¹®ÀÚ¿­ º¹»ç
+	int len = strlen(name); // nameì˜ ë¬¸ì ê°œìˆ˜
+	this->name = new char [len+1]; // name ë¬¸ìì—´ ê³µê°„ Âë‹¹
+	strcpy(this->name, name); // nameì— ë¬¸ìì—´ ë³µì‚¬
 }
 
-Person::~Person() {// ¼Ò¸êÀÚ
-	if(name) // ¸¸ÀÏ name¿¡ µ¿Àû ÇÒ´çµÈ ¹è¿­ÀÌ ÀÖÀ¸¸é
-		delete [] name; // µ¿Àû ÇÒ´ç ¸Ş¸ğ¸® ¼Ò¸ê
+Person::~Person() {// ì†Œë©¸ì
+	if(name) // ë§Œì¼ nameì— ë™ì  í• ë‹¹ëœ ë°°ì—´ì´ ìˆìœ¼ë©´
+		delete [] name; // ë™ì  í• ë‹¹ ë©”ëª¨ë¦¬ ì†Œë©¸
 }
 
-void Person::changeName(const char* name) { // ÀÌ¸§ º¯°æ
+void Person::changeName(const char* name) { // ì´ë¦„ ë³€ê²½
 	if(strlen(name) > strlen(this->name))
-		return; // ÇöÀç name¿¡ ÇÒ´çµÈ ¸Ş¸ğ¸®º¸´Ù ±ä ÀÌ¸§À¸·Î ¹Ù²Ü ¼ö ¾ø´Ù.
+		return; // í˜„ì¬ nameì— í• ë‹¹ëœ ë©”ëª¨ë¦¬ë³´ë‹¤ ê¸´ ì´ë¦„ìœ¼ë¡œ ë°”ê¿€ ìˆ˜ ì—†ë‹¤.
 	strcpy(this->name, name);
 }
 
 int main() {
-	Person father(1, "Kitae");			// (1) father °´Ã¼ »ı¼º
-	Person daughter(father);			// (2) daughter °´Ã¼ º¹»ç »ı¼º. º¹»ç »ı¼ºÀÚ È£Ãâ
+	Person father(1, "Kitae");			// (1) father ê°ì²´ ìƒì„±
+	Person daughter(father);			// (2) daughter ê°ì²´ ë³µì‚¬ ìƒì„±. ë³µì‚¬ ìƒì„±ì í˜¸ì¶œ
 
-	cout << "daughter °´Ã¼ »ı¼º Á÷ÈÄ ----" << endl;
-	father.show();						// (3) father °´Ã¼ Ãâ·Â
-	daughter.show();					// (3) daughter °´Ã¼ Ãâ·Â
+	cout << "daughter ê°ì²´ ìƒì„± ì§í›„ ----" << endl;
+	father.show();						// (3) father ê°ì²´ ì¶œë ¥
+	daughter.show();					// (3) daughter ê°ì²´ ì¶œë ¥
 
-	daughter.changeName("Grace");		// (4) 	daughterÀÇ ÀÌ¸§À» "Grace"·Î º¯°æ
-	cout << "daughter ÀÌ¸§À» Grace·Î º¯°æÇÑ ÈÄ ----" << endl;
-	father.show();						// (5) father °´Ã¼ Ãâ·Â
-	daughter.show();					// (5) daughter °´Ã¼ Ãâ·Â
+	daughter.changeName("Grace");		// (4) 	daughterì˜ ì´ë¦„ì„ "Grace"ë¡œ ë³€ê²½
+	cout << "daughter ì´ë¦„ì„ Graceë¡œ ë³€ê²½í•œ í›„ ----" << endl;
+	father.show();						// (5) father ê°ì²´ ì¶œë ¥
+	daughter.show();					// (5) daughter ê°ì²´ ì¶œë ¥
 
-	return 0;							// (6), (7) daughter, father °´Ã¼ ¼Ò¸ê
+	return 0;							// (6), (7) daughter, father ê°ì²´ ì†Œë©¸
 }

@@ -1,12 +1,12 @@
 /*
-	ÂüÁ¶¿¡ ÀÇÇÑ È£Ãâ·Î °´Ã¼ Àü´Þ
-		°ª¿¡ ÀÇÇÑ È£Ãâ·Î °´Ã¼ Àü´Þ 
-			¿øº» °´Ã¼ º¯°æ ºÒ°¡, ¸Å°³ º¯¼ö °´Ã¼ÀÇ »ý¼ºÀÚ ½ÇÇà x, ¼Ò¸êÀÚ¸¸ ½ÇÇàµÇ´Â ºñ´ëÄª ±¸Á¶
-		ÂüÁ¶¿¡ ÀÇÇÑ È£Ãâ·Î °´Ã¼ Àü´Þ
-			ÂüÁ¶ ¸Å°³ º¯¼ö·Î ÀÌ·ç¾îÁø ¸ðµç ¿¬»êÀº ¿øº» °´Ã¼¿¡ ´ëÇÑ ¿¬»êÀÌ µÈ´Ù.
-			ÂüÁ¶ ¸Å°³ º¯¼ö´Â ÀÌ¸§¸¸ »ý¼ºµÇ¹Ç·Î, »ý¼ºÀÚ¿Í ¼Ò¸êÀÚ´Â ¾Æ¿¹ ½ÇÇàµÇÁö ¾Ê´Â´Ù.
-			Circle c;			// »ý¼ºÀÚ »ý¼º
-			Circle &refc = c; 	// »ý¼ºÀÚ »ý¼º 	x
+	ì°¸ì¡°ì— ì˜í•œ í˜¸ì¶œë¡œ ê°ì²´ ì „ë‹¬
+		ê°’ì— ì˜í•œ í˜¸ì¶œë¡œ ê°ì²´ ì „ë‹¬ 
+			ì›ë³¸ ê°ì²´ ë³€ê²½ ë¶ˆê°€, ë§¤ê°œ ë³€ìˆ˜ ê°ì²´ì˜ ìƒì„±ìž ì‹¤í–‰ x, ì†Œë©¸ìžë§Œ ì‹¤í–‰ë˜ëŠ” ë¹„ëŒ€ì¹­ êµ¬ì¡°
+		ì°¸ì¡°ì— ì˜í•œ í˜¸ì¶œë¡œ ê°ì²´ ì „ë‹¬
+			ì°¸ì¡° ë§¤ê°œ ë³€ìˆ˜ë¡œ ì´ë£¨ì–´ì§„ ëª¨ë“  ì—°ì‚°ì€ ì›ë³¸ ê°ì²´ì— ëŒ€í•œ ì—°ì‚°ì´ ëœë‹¤.
+			ì°¸ì¡° ë§¤ê°œ ë³€ìˆ˜ëŠ” ì´ë¦„ë§Œ ìƒì„±ë˜ë¯€ë¡œ, ìƒì„±ìžì™€ ì†Œë©¸ìžëŠ” ì•„ì˜ˆ ì‹¤í–‰ë˜ì§€ ì•ŠëŠ”ë‹¤.
+			Circle c;			// ìƒì„±ìž ìƒì„±
+			Circle &refc = c; 	// ìƒì„±ìž ìƒì„± 	x
 
 */
 #include <iostream>
@@ -26,16 +26,16 @@ public:
 
 Circle::Circle() {
 	radius = 1;
-	cout << "»ý¼ºÀÚ ½ÇÇà radius = " << radius << endl;
+	cout << "ìƒì„±ìž ì‹¤í–‰ radius = " << radius << endl;
 }
 
 Circle::Circle(int radius) {
 	this->radius = radius;
-	cout << "»ý¼ºÀÚ ½ÇÇà radius = "  << radius << endl;
+	cout << "ìƒì„±ìž ì‹¤í–‰ radius = "  << radius << endl;
 }
 
 Circle::~Circle() {
-	cout << "¼Ò¸êÀÚ ½ÇÇà radius = " << radius << endl;
+	cout << "ì†Œë©¸ìž ì‹¤í–‰ radius = " << radius << endl;
 }
 
 void increase(Circle &c) {

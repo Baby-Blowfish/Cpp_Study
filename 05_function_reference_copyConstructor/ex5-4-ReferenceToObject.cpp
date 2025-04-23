@@ -1,5 +1,5 @@
 /*
-	°´Ã¼¿¡ ´ëÇÑ ÂüÁ¶
+	ê°ì²´ì— ëŒ€í•œ ì°¸ì¡°
 */
 
 #include <iostream>
@@ -18,5 +18,5 @@ int main() {
 	Circle circle;
 	Circle &refc = circle; 
 	refc.setRadius(10);
-	cout << refc.getArea() << " " << circle.getArea(); // µÎ È£ÃâÀº µ¿ÀÏ °´Ã¼¿¡ ´ëÇÑ È£Ãâ
+	cout << refc.getArea() << " " << circle.getArea(); // ë‘ í˜¸ì¶œì€ ë™ì¼ ê°ì²´ì— ëŒ€í•œ í˜¸ì¶œ
 }

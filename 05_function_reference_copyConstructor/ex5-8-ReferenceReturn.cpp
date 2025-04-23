@@ -1,37 +1,37 @@
 /*
-	ÂüÁ¶ ¸®ÅÏ
+	ì°¸ì¡° ë¦¬í„´
 	char c = 'a';
 	
 	char& r(){
-		return c;  // cÀÇ ÂüÁ¶ ¸®ÅÏ
+		return c;  // cì˜ ì°¸ì¡° ë¦¬í„´
 	}
 
-	r() = 'c';    //  °¡´É
+	r() = 'c';    //  ê°€ëŠ¥
 
 	char* p()
 	{
 		return &c;
 	}
 
-	char *s = p();  // °¡´É
-	*s = 'b';		// °¡´É 
-	p() = 'b';		// (Æ÷ÀÎÅÍ = °ª) ¿À·ù!!
-					// l-value (°ø°£) = r-value(°ª)
+	char *s = p();  // ê°€ëŠ¥
+	*s = 'b';		// ê°€ëŠ¥ 
+	p() = 'b';		// (í¬ì¸í„° = ê°’) ì˜¤ë¥˜!!
+					// l-value (ê³µê°„) = r-value(ê°’)
 */
 
 #include <iostream>
 using namespace std;
 
-// ¹è¿­ sÀÇ index ¿ø¼Ò °ø°£¿¡ ´ëÇÑ ÂüÁ¶ ¸®ÅÏÇÏ´Â ÇÔ¼ö
+// ë°°ì—´ sì˜ index ì›ì†Œ ê³µê°„ì— ëŒ€í•œ ì°¸ì¡° ë¦¬í„´í•˜ëŠ” í•¨ìˆ˜
 char& find(char s[], int index) {
-	return s[index]; // ÂüÁ¶ ¸®ÅÏ
+	return s[index]; // ì°¸ì¡° ë¦¬í„´
 }
 
 int main() {
 	char name[] = "Mike";
 	cout << name << endl;
 
-	find(name, 0) = 'S'; // name[0]='S'·Î º¯°æ
+	find(name, 0) = 'S'; // name[0]='S'ë¡œ ë³€ê²½
 	cout << name << endl;
 
 	char& ref = find(name, 2);
